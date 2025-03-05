@@ -84,7 +84,7 @@ const Home = () => {
                   font-black 
                   ${darkMode ? "bg-gradient-to-b from-gray-400 to-gray-600 bg-clip-text text-transparent" : "text-[bg-secondary]"}
                 `}>
-                  PLAN
+                  DYNAMIC
                 </span>
               </motion.div>
 
@@ -98,7 +98,7 @@ const Home = () => {
                   font-black 
                   ${darkMode ? "bg-gradient-to-b from-gray-400 to-gray-600 bg-clip-text text-transparent" : "text-[bg-secondary]"}
                 `}>
-                  CONNECT
+                  VOYAGE
                 </span>
               </motion.div>
 
@@ -112,7 +112,7 @@ const Home = () => {
                   font-black 
                   ${darkMode ? "bg-gradient-to-b from-gray-400 to-gray-600 bg-clip-text text-transparent" : "text-[bg-secondary]"}
                 `}>
-                  CELEBRATE
+                  SOLUTIONS
                 </span>
               </motion.div>
             </div>
