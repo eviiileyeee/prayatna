@@ -109,7 +109,7 @@
                 >
                     <div className="text-center">
                         <h2 className="mt-6 text-4xl font-bold text-gray-900 dark:text-white">
-                            Welcome to Eventflow
+                            Welcome to ShipWise
                         </h2>
                         <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
                             Create your account to get started
