@@ -1,5 +1,61 @@
 import React, { useState, useEffect, useRef } from "react";
 import Globe from "react-globe.gl";
+import { 
+  LayoutGrid, 
+  MapPin, 
+  Ship, 
+  Settings 
+} from 'lucide-react';
+
+const DashNav = ({ activeTab, onTabChange }) => {
+  const navItems = [
+    { 
+      icon: LayoutGrid, 
+      label: 'Dashboard', 
+      key: 'dashboard' 
+    },
+    { 
+      icon: MapPin, 
+      label: 'Routes', 
+      key: 'routes' 
+    },
+    { 
+      icon: Ship, 
+      label: 'Ship Info', 
+      key: 'shipInfo' 
+    },
+    { 
+      icon: Settings, 
+      label: 'Settings', 
+      key: 'settings' 
+    }
+  ];
+
+  return (
+    <div className="flex items-center justify-center bg-gray-800 rounded-full p-2 space-x-2">
+      {navItems.map((item) => (
+        <button
+          key={item.key}
+          onClick={() => onTabChange(item.key)}
+          className={`
+            flex items-center justify-center 
+            p-2 rounded-full 
+            transition-all duration-300 
+            ${activeTab === item.key 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-transparent text-gray-400 hover:bg-gray-700'
+            }
+          `}
+        >
+          <item.icon size={20} />
+          {activeTab === item.key && (
+            <span className="ml-2 text-sm font-medium">{item.label}</span>
+          )}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 const ThreeJSGlobe = ({ onRiskPointSelect }) => {
   const riskData = [
@@ -57,6 +113,7 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
   ];
 
   const [selectedRisk, setSelectedRisk] = useState(null);
+  const [activeTab, setActiveTab] = useState('routes'); // Default active tab
   const containerRef = useRef(null);
 
   return (
@@ -69,10 +126,14 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
         overflow: "hidden",
         backgroundColor: "white",
         display: "flex",
+        flexDirection: "column", // Change to column to stack elements
         justifyContent: "center",
         alignItems: "center",
       }}
     >
+      {/* Add the navigation component at the top */}
+     
+
       <Globe
         width={500}
         height={500}
@@ -123,9 +184,14 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
           <p>Details: {selectedRisk.details}</p>
         </div>
       )}
+       <div className="absolute bottom-1 z-10">
+        <DashNav 
+          activeTab={activeTab} 
+          onTabChange={setActiveTab} 
+        />
+      </div>
     </div>
   );
 };
 
 export default ThreeJSGlobe;
-
