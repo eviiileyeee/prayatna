@@ -20,6 +20,9 @@ const Navbar = () => {
       </div>
       
       <nav className="flex items-center space-x-5">
+      <Link to="/" className="text-primary font-medium text-sm hover:opacity-80 transition-opacity">
+          Home
+        </Link>
         <Link to="/dashboard" className="text-primary font-medium text-sm hover:opacity-80 transition-opacity">
           Dashboard
         </Link>
