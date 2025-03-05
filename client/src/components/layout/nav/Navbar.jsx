@@ -10,7 +10,9 @@ import {
   Home, 
   Calendar, 
   Menu, 
-  X 
+  X ,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { useAuth } from "../../../context/AuthContext";
 import { useTheme } from "../../../context/ThemeContext/ThemeContext";
@@ -145,14 +147,19 @@ const Navbar = () => {
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
           `}
         >
-          {darkMode ? '☀️' : '🌙'}
+          {darkMode ? <Sun/> : <Moon/>}
         </button>
 
         {user ? (
           <div className="flex items-center space-x-4">
             <button className="relative text-muted-foreground hover:text-foreground transition-colors">
-              <Bell className={`h-5 w-5 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`} />
-              <span className="absolute -top-1 -right-1 h-2.5 w-2.5 bg-red-500 rounded-full"></span>
+              <Link 
+              to = "/notification"
+              >
+                 <Bell className={`h-5 w-5 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`} />
+                 <span className="absolute -top-1 -right-1 h-2.5 w-2.5 bg-red-500 rounded-full"></span>
+              </Link>
+             
             </button>
 
             <div 
@@ -162,7 +169,14 @@ const Navbar = () => {
                 ${darkMode ? 'bg-gray-700 text-white' : 'bg-blue-100 text-blue-800'}
               `}
             >
-              {user.initials || 'JS'}
+              <Link
+              to = "/profile"
+              >
+                <img src = {user.profileImage || 'JS'}
+                className='rounded-full'
+                ></img>
+              </Link>
+             
             </div>
             <button 
               onClick={handleLogout}
