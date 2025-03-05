@@ -1,8 +1,13 @@
-import react from "react";
+import Navbar from "./nav/Navbar";
+import Footer from "./footer/Footer";
+import ScrollToTop from "../subComponents/ScrollToTop";
+ const DashboardLayout = ({ children }) => (
+    <div id="main" className="relative overflow-hidden min-h-screen">
+      <ScrollToTop />
+      <Navbar />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+    </div>
+  );
 
-
-const Dashboard = () => {
-        return <div>Dashboard</div>;
-    };
-    
-    export default Dashboard;
+  export default DashboardLayout;

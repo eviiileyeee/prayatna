@@ -8,7 +8,7 @@ import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/Register";
 import ProfilePage from "../pages/nav/ProfilePage";
 import PageNotFound from "../components/subComponents/PageNoteFound";
-import MapPage from "../pages/MapPage";
+import Map from "../pages/Map"
 
 const AppRouter = () => {
   return (
@@ -25,8 +25,8 @@ const AppRouter = () => {
          
 
           {/* Other routes */}
-          <Route path="/map" element={<ProtectedRoute><MapPage /></ProtectedRoute>} />
-         
+          <Route path="/map" element={<DashboardLayout><Map /></DashboardLayout>} />
+
          
           {/* 404 route */}
           <Route path="*" element={<DashboardLayout><div className="flex items-center justify-center min-h-screen"><PageNotFound /></div></DashboardLayout>} />
