@@ -11,6 +11,7 @@ import PageNotFound from "../components/subComponents/PageNoteFound";
 import MapPage from "../pages/MapPage";
 import Dashboard from "../pages/Dashboard";
 
+
 const AppRouter = () => {
   return (
     <AuthProvider>
