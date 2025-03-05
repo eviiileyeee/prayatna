@@ -12,6 +12,7 @@ function App() {
     <ThemeProvider>
     <AppRouter />
     </ThemeProvider>
+    {/* <Map/> */}
     </>
   )
 }

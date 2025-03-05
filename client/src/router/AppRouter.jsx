@@ -8,7 +8,7 @@ import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/Register";
 import ProfilePage from "../pages/nav/ProfilePage";
 import PageNotFound from "../components/subComponents/PageNoteFound";
-import Map from "../pages/Map"
+import Map from "../pages/MapPage"
 
 const AppRouter = () => {
   return (

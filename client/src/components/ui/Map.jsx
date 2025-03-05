@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import leaflet from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 export default function Map() {
   const mapRef = useRef(null);
@@ -1036,7 +1035,7 @@ export default function Map() {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    osm.addTo(map);
+    // osm.addTo(map);
 
     const googleStreets = leaflet.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
       maxZoom: 20,
@@ -1045,48 +1044,46 @@ export default function Map() {
 
     googleStreets.addTo(map);
 
-    // Add markers
-    leaflet.marker([18.95, 72.93]).addTo(map)
-      .bindPopup("This is Mumbai Port, India")
-      .openPopup();
+    // leaflet.marker([18.95, 72.93]).addTo(map)
+    //   .bindPopup("This is Mumbai Port, India")
+    //   .openPopup();
 
-    leaflet.marker([6.95, 79.85]).addTo(map)
-      .bindPopup("This is Colombo Port, Sri Lanka")
-      .openPopup();
+    // leaflet.marker([6.95, 79.85]).addTo(map)
+    //   .bindPopup("This is Colombo Port, Sri Lanka")
+    //   .openPopup();
 
-    leaflet.marker([24.47, 53.37]).addTo(map)
-      .bindPopup("This is Mubarraz Port, UAE")
-      .openPopup();
+    // leaflet.marker([24.47, 53.37]).addTo(map)
+    //   .bindPopup("This is Mubarraz Port, UAE")
+    //   .openPopup();
 
-    leaflet.marker([22.55, 88.32]).addTo(map)
-      .bindPopup("This is Mubarraz Port, UAE")
-      .openPopup();
+    // leaflet.marker([22.55, 88.32]).addTo(map)
+    //   .bindPopup("This is Mubarraz Port, UAE")
+    //   .openPopup();
 
-    leaflet.marker([3.2192, 40.1169]).addTo(map)
-      .bindPopup("This is Malindi, Kenya")
-      .openPopup();
+    //   leaflet.marker([3.2192, 40.1169]).addTo(map)
+    // .bindPopup("This is Malindi, Kenya")
+    // .openPopup();
 
     // Draw GeoJSON line
-    leaflet.geoJSON(M2C, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup("Sea Route: Mumbai to Colombo");
-      },
-      style: {
-        color: "red",
-        weight: 4,
-        lineCap: 'round'
-      }
-    }).addTo(map);
+    // leaflet.geoJSON(M2C, {
+    //   onEachFeature: function (feature, layer) {
+    //     layer.bindPopup("Sea Route: Mumbai to Colombo");
+    //   },
+    //   style: {
+    //     color: "red",
+    //     weight: 1,
+    //     lineCap: 'round'
+    //   }
+    // }).addTo(map);
+
+
+    
+
 
     return () => {
       map.remove();
     };
   }, []);
 
-  return (
-    <div
-      ref={mapRef}
-      className="h-[calc(100vh-16rem)] md:h-full w-full"
-    ></div>
-  );
+  return <div ref={mapRef} style={{ height: "100vh", width: "100%" }}></div>;
 }
