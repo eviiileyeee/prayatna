@@ -1,5 +1,4 @@
 const User = require("../models/userModel")
-const Event = require("../models/eventModel");
 
 
 exports.searchUser = async (req, res) => {
