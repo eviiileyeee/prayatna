@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { motion, easeOut } from "framer-motion";
 import { useTheme } from "../context/ThemeContext/ThemeContext";
 import Loader from "../components/ui/Loader.jsx";
-import Button from "../components/ui/Button.jsx"; // Import the new Button component
 
 const Home = () => {
   const navigate = useNavigate();
@@ -127,12 +126,7 @@ const Home = () => {
 
             {/* Get Started Button - Using the new Button component */}
             <div className="flex justify-start mt-8 sm:mt-2">
-              <Button 
-                onClick={handleClick}
-                size={window.innerWidth < 640 ? "md" : window.innerWidth < 768 ? "md" : "lg"}
-              >
-                GET STARTED
-              </Button>
+              
             </div>
 
             {/* Scroll for More - Mobile Only */}
