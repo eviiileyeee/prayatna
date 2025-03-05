@@ -25,7 +25,7 @@ const AppRouter = () => {
          
 
           {/* Other routes */}
-          <Route path="/map" element={<Map />} />
+          <Route path="/map" element={<DashboardLayout><Map /></DashboardLayout>} />
 
          
           {/* 404 route */}

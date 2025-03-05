@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Ship, BarChart2, Users, Settings, Bell, Search } from 'lucide-react';
 
+
 const Navbar = () => {
   return (
     <header className="w-full glassmorphism py-3 px-5 flex items-center justify-between mb-6">
