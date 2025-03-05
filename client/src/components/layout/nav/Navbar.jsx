@@ -5,10 +5,10 @@ import { Ship, BarChart2, Users, Settings, Bell, Search } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <header className="w-full glassmorphism py-3 px-5 flex items-center justify-between mb-6">
+    <header className="w-full glassmorphism py-3 px-5 flex items-center justify-between bg-gray-900">
       <div className="flex items-center space-x-1">
         <Ship className="h-6 w-6 text-primary" />
-        <span className="font-bold text-lg tracking-tight">ShipWise</span>
+        <span className="text-white font-bold text-lg tracking-tight">ShipWise</span>
       </div>
       
       <div className="flex items-center bg-white/40 backdrop-blur-md rounded-full pl-3 pr-4 py-1.5 w-1/3 border border-white/20">
@@ -16,7 +16,7 @@ const Navbar = () => {
         <input 
           type="text" 
           placeholder="Search vessels, routes or ports..." 
-          className="bg-transparent w-full text-sm outline-none placeholder:text-muted-foreground/70"
+          className="bg-transparent w-full text-gray-200 text-sm outline-none placeholder:text-muted-foreground/70"
         />
       </div>
       
@@ -24,16 +24,16 @@ const Navbar = () => {
       <Link to="/" className="text-primary font-medium text-sm hover:opacity-80 transition-opacity">
           Home
         </Link>
-        <Link to="/dashboard" className="text-primary font-medium text-sm hover:opacity-80 transition-opacity">
+        <Link to="/dashboard" className="text-primary t font-medium text-sm hover:opacity-80 transition-opacity">
           Dashboard
         </Link>
-        <Link to="/map" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+        <Link to="/map" className=" text-primary text-muted-foreground text-sm hover:text-foreground transition-colors">
           Map
         </Link>
-        <Link to="/fleet" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+        <Link to="/fleet" className="text-primary text-muted-foreground text-sm hover:text-foreground transition-colors">
           Fleet
         </Link>
-        <Link to="/analytics" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+        <Link to="/analytics" className="text-primary text-muted-foreground text-sm hover:text-foreground transition-colors">
           Analytics
         </Link>
       </nav>
