@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import Navbar from '../components/layout/nav/Navbar';
 import ThreeJSGlobe from '../components/ui/ThreeJSGlobe';
-import MainDashboard from '../components/ui/MainDashboard'; // Import the MainDashboard
+import MainDashboard from '../components/ui/MainDashboard';
+import DashboardFooter from '../pages/DashboardFooter'; // Import the DashboardFooter
 
 const Dashboard = () => {
     // Optional: State to handle risk point selection
     const [selectedRiskPoint, setSelectedRiskPoint] = useState(null);
-
+    
     // Handler for risk point selection
     const handleRiskPointSelect = (riskPointData) => {
         setSelectedRiskPoint(riskPointData);
     };
-
+    
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-white">
             <div className="flex flex-grow">
                 <MainDashboard>
                     <ThreeJSGlobe onRiskPointSelect={handleRiskPointSelect} />
@@ -28,6 +28,11 @@ const Dashboard = () => {
                         </div>
                     )}
                 </MainDashboard>
+            </div>
+            
+            {/* Add DashboardFooter at the bottom of the page */}
+            <div className="p-4">
+                <DashboardFooter />
             </div>
         </div>
     );
