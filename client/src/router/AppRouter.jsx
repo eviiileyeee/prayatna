@@ -9,6 +9,7 @@ import RegisterPage from "../pages/auth/Register";
 import ProfilePage from "../pages/nav/ProfilePage";
 import PageNotFound from "../components/subComponents/PageNoteFound";
 import Map from "../pages/Map"
+import Dashboard from "../pages/Dashboard";
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
 
           {/* Other routes */}
           <Route path="/map" element={<DashboardLayout><Map /></DashboardLayout>} />
+          <Route path="/dashboard" element={<DashboardLayout><Dashboard/></DashboardLayout> }/>
 
          
           {/* 404 route */}
