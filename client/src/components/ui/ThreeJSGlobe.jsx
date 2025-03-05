@@ -120,6 +120,7 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
     <div
       ref={containerRef}
       style={{
+        boxShadow: '0 0 10px rgba(0,0,0,0.1)',
         height: "500px",
         width: "100%",
         position: "relative",
@@ -135,8 +136,8 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
      
 
       <Globe
-        width={500}
-        height={500}
+        width={800}
+        height={700}
         globeImageUrl="/2k_earth_daymap.jpg"
         bumpImageUrl="/2k_earth_topobump.jpg"
         backgroundColor="white"
@@ -184,12 +185,7 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
           <p>Details: {selectedRisk.details}</p>
         </div>
       )}
-       <div className="absolute bottom-1 z-10 ">
-        <DashNav 
-          activeTab={activeTab} 
-          onTabChange={setActiveTab} 
-        />
-      </div>
+      
     </div>
   );
 };

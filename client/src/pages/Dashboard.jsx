@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import ThreeJSGlobe from '../components/ui/ThreeJSGlobe';
 import MainDashboard from '../components/ui/MainDashboard';
-import DashboardFooter from '../pages/DashboardFooter'; // Import the DashboardFooter
-
 
 const Dashboard = () => {
     // State to handle risk point selection
     const [selectedRiskPoint, setSelectedRiskPoint] = useState(null);
-    
+
+    // State for active tab
+    const [activeTab, setActiveTab] = useState('dashboard');
+
     // Handler for risk point selection
     const handleRiskPointSelect = (riskPointData) => {
         setSelectedRiskPoint(riskPointData);
     };
-    
+
     return (
-        <div className="min-h-screen flex flex-col bg-white">
+        <div className="min-h-screen flex flex-col bg-white relative">
             {/* Main Content */}
             <div className="flex-grow flex">
                 <MainDashboard>
                     <ThreeJSGlobe onRiskPointSelect={handleRiskPointSelect} />
-                    
+
                     {/* Risk Point Details Panel */}
                     {selectedRiskPoint && (
                         <div className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-md z-10">
@@ -30,11 +31,6 @@ const Dashboard = () => {
                         </div>
                     )}
                 </MainDashboard>
-            </div>
-            
-            {/* Footer Positioned Correctly */}
-            <div className="w-full">
-                <DashboardFooter />
             </div>
         </div>
     );

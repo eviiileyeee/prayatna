@@ -1,10 +1,5 @@
 import React from 'react';
-import { 
-  LayoutGrid, 
-  MapPin, 
-  Ship, 
-  Settings 
-} from 'lucide-react';
+import { LayoutGrid, MapPin, Ship, Settings } from 'lucide-react';
 
 const DashNav = ({ activeTab, onTabChange }) => {
   const navItems = [
@@ -15,7 +10,7 @@ const DashNav = ({ activeTab, onTabChange }) => {
   ];
 
   return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center bg-gray-800 rounded-full p-3 space-x-4 shadow-lg">
+    <div className="absolute bottom-4 left-76 mb-32 flex items-center bg-gray-800 rounded-full p-3 space-x-4 shadow-lg">
       {navItems.map((item) => (
         <button
           key={item.key}
@@ -37,7 +32,6 @@ const DashNav = ({ activeTab, onTabChange }) => {
         </button>
       ))}
     </div>
-    
   );
 };
 
