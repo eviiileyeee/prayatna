@@ -9,13 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <ThemeContext>
+       <ThemeContext>
         <AppRouter />
-      </ThemeContext> */}
-
-      <Home />
-        <Map />
-
+      </ThemeContext> 
     </>
   )
 }

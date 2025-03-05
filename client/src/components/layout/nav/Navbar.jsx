@@ -23,8 +23,8 @@ const Navbar = () => {
         <Link to="/dashboard" className="text-primary font-medium text-sm hover:opacity-80 transition-opacity">
           Dashboard
         </Link>
-        <Link to="/routes" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
-          Routes
+        <Link to="/map" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+          Map
         </Link>
         <Link to="/fleet" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
           Fleet

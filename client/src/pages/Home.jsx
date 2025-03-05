@@ -48,71 +48,7 @@ const HomePage = () => {
 
       {/* Main Content */}
       <div className="relative z-20 min-h-screen flex flex-col">
-        {/* Improved Navbar */}
-        <nav className="relative p-6 flex items-center justify-evenly">
-          {/* Left Section - Logo */}
-          <div className="flex items-center space-x-4">
-            <Anchor className="text-amber-400 w-10 h-10" />
-            <h1 className="text-3xl font-bold text-white tracking-wider">
-              AquaPath
-            </h1>
-          </div>
-
-          {/* Right Section - Navigation & Actions */}
-          <div className="flex items-center space-x-6">
-            {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center space-x-6">
-              <a 
-                href="#" 
-                className="text-white hover:text-amber-300 transition flex items-center space-x-2"
-              >
-                <Map className="w-5 h-5" />
-                <span>Map</span>
-              </a>
-              <a 
-                href="#" 
-                className="text-white hover:text-amber-300 transition flex items-center space-x-2"
-              >
-                <Compass className="w-5 h-5" />
-                <span>Dashboard</span>
-              </a>
-              <a 
-                href="#" 
-                className="text-white hover:text-amber-300 transition"
-              >
-                About
-              </a>
-            </div>
-
-            {/* User Actions */}
-            <div className="flex items-center space-x-4">
-              {isLoggedIn ? (
-                <div className="flex items-center space-x-2 text-white hover:text-amber-300 transition">
-                  <User className="w-6 h-6" />
-                  <span className="hidden md:block">Profile</span>
-                </div>
-              ) : (
-                <div className="flex space-x-4">
-                  <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition hidden md:block">
-                    Login
-                  </button>
-                  <button className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition hidden md:block">
-                    Signup
-                  </button>
-                </div>
-              )}
-
-              {/* Mobile Menu Toggle */}
-              <button 
-                className="md:hidden text-white hover:text-amber-300"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
-        </nav>
-
+       
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-blue-900/90 z-50">
