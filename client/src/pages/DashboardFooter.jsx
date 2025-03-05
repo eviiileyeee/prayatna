@@ -29,7 +29,7 @@ const DashboardFooter = () => {
   // Render compact view when collapsed
   if (!isExpanded) {
     return (
-      <div className="relative p-4 bg-white rounded-lg shadow-md ">
+      <div className="relative p-4 bg-white rounded-lg shadow-md">
         <div className="flex justify-between items-center">
           <span className="text-lg font-semibold">Performance Dashboard</span>
           <button 
@@ -55,7 +55,7 @@ const DashboardFooter = () => {
 
       <div className="grid grid-cols-3 gap-4">
         {/* Fuel Consumption Trend */}
-        <div className="border rounded-lg p-4">
+        <div className="p-4">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold">Fuel Consumption Trend</h3>
             <div className="flex items-center">
@@ -89,7 +89,7 @@ const DashboardFooter = () => {
         </div>
 
         {/* Fleet Performance */}
-        <div className="border rounded-lg p-4">
+        <div className="p-4">
           <h3 className="text-lg font-semibold mb-4">Fleet Performance</h3>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
@@ -114,7 +114,7 @@ const DashboardFooter = () => {
         </div>
 
         {/* Fleet Risk Distribution */}
-        <div className="border rounded-lg p-4">
+        <div className="p-4">
           <h3 className="text-lg font-semibold mb-4">Fleet Risk Distribution</h3>
           <div className="relative w-full h-40">
             <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -185,3 +185,4 @@ const DashboardFooter = () => {
 };
 
 export default DashboardFooter;
+

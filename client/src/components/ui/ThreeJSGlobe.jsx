@@ -184,7 +184,7 @@ const ThreeJSGlobe = ({ onRiskPointSelect }) => {
           <p>Details: {selectedRisk.details}</p>
         </div>
       )}
-       <div className="absolute bottom-1 z-10">
+       <div className="absolute bottom-1 z-10 ">
         <DashNav 
           activeTab={activeTab} 
           onTabChange={setActiveTab} 

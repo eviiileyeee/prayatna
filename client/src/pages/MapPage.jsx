@@ -3,7 +3,7 @@ import SideBar from "../components/ui/SideBar";
 
 export default function MapPage() {
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row h-screen pt-16"> {/* Adjusted padding to avoid Navbar overlap */}
       {/* Sidebar */}
       <div className="w-full md:w-96 bg-gradient-to-br from-gray-800 to-gray-900 text-white p-6 shadow-2xl overflow-y-auto">
         <SideBar />

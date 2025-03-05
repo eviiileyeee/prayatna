@@ -26,7 +26,7 @@ const AppRouter = () => {
           <Route path="/notifications" element = {<ProtectedRoute></ProtectedRoute>} />
 
           {/* Other routes */}
-          <Route path="/mappage" element={<DashboardLayout><MapPage /></DashboardLayout>} />
+          <Route path="/map" element={<DashboardLayout><MapPage /></DashboardLayout>} />
           <Route path="/dashboard" element={<DashboardLayout><Dashboard/></DashboardLayout> }/>
           <Route path="/faqs" element={<DashboardLayout></DashboardLayout>} />
 
