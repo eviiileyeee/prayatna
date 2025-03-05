@@ -23,7 +23,7 @@ const AppRouter = () => {
 
           {/* Protected routes */}
           <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
-         
+          <Route path="/notifications" element = {<ProtectedRoute></ProtectedRoute>} />
 
           {/* Other routes */}
           <Route path="/mappage" element={<DashboardLayout><MapPage /></DashboardLayout>} />
