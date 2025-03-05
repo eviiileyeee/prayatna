@@ -3,7 +3,7 @@ import { Ship, Fuel, MapPin, Calendar, AlertTriangle } from 'lucide-react';
 
 const VesselCard = ({ type, name, speed, route, eta, cargoPercentage, conditions, riskLevel }) => {
   return (
-    <div className="bg-white border rounded-lg shadow-sm p-4 mb-4">
+    <div className="bg-white rounded-lg shadow-lg p-4 mb-4">
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center">
           <div className={`w-3 h-3 rounded-full mr-2 ${
