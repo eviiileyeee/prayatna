@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Twitter, 
   Facebook, 
@@ -44,12 +45,9 @@ const Footer = () => {
 
           {/* Column 3: Services */}
           <div>
-            <h4 className="text-xl font-bold mb-4">Our Services</h4>
+            <h4 className="text-xl font-bold mb-4">FAQ</h4>
             <nav className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors">Web Development</a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors">Design</a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors">Consulting</a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors">Support</a>
+              <Link to="/faq" className="block text-gray-300 hover:text-white transition-colors">FAQs</Link>
             </nav>
           </div>
 
