@@ -1065,17 +1065,17 @@ export default function Map() {
     // .bindPopup("This is Malindi, Kenya")
     // .openPopup();
 
-    // Draw GeoJSON line
-    // leaflet.geoJSON(M2C, {
-    //   onEachFeature: function (feature, layer) {
-    //     layer.bindPopup("Sea Route: Mumbai to Colombo");
-    //   },
-    //   style: {
-    //     color: "red",
-    //     weight: 1,
-    //     lineCap: 'round'
-    //   }
-    // }).addTo(map);
+
+    leaflet.geoJSON(M2C, {
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup("Sea Route: Mumbai to Colombo");
+      },
+      style: {
+        color: "red",
+        weight: 2,
+        lineCap: 'round'
+      }
+    }).addTo(map);
 
 
     
