@@ -4,6 +4,6 @@ const RouteController = require('../controllers/routeController');
 
 const routeController = new RouteController();
 
-router.post('/findRoute', (req, res) => routeController.findRoute(req, res));
+router.post('/', (req, res) => routeController.findRoute(req, res));
 
 module.exports = router;

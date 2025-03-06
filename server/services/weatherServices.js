@@ -1,9 +1,9 @@
-const fetch = require('node-fetch');
 
 class WeatherService {
     static async getWeatherConditions({ latitude, longitude }) {
         try {
             const url = `https://api.open-meteo.com/v1/marine?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=wave_height,visibility`;
+            const { default: fetch } = await import('node-fetch');
             const response = await fetch(url);
             const data = await response.json();
         
