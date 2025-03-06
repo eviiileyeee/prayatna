@@ -11,7 +11,7 @@ import {
   Calendar, 
   Menu, 
   X ,
-  Sun,
+  Sun,                      
   Moon
 } from 'lucide-react';
 import { useAuth } from "../../../context/AuthContext";
