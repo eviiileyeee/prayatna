@@ -6,11 +6,11 @@ class WeatherService {
             const url = `https://api.open-meteo.com/v1/marine?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=wave_height,visibility`;
             const response = await fetch(url);
             const data = await response.json();
-
+        
             if (!data.current_weather) {
                 throw new Error("Weather data unavailable");
             }
-
+        
             // Extract required data
             const windSpeed = data.current_weather.windspeed || 0; // km/h
             const waveHeight = data.hourly?.wave_height?.[0] || 0; // meters
