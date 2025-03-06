@@ -145,11 +145,11 @@ const Navbar = () => {
           className={`
             p-2 rounded-full transition-colors 
             ${darkMode 
-              ? 'bg-gray-700 text-white hover:bg-gray-600' 
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
+              ? 'bg-gray-700 hover:bg-gray-600' 
+              : 'bg-gray-100 hover:bg-gray-200'}
           `}
         >
-          {darkMode ? <Sun/> : <Moon/>}
+          {darkMode ? <Sun className="text-white"/> : <Moon className="text-gray-900"/>}
         </button>
 
         {user ? (
