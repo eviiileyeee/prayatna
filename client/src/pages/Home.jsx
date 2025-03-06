@@ -150,7 +150,6 @@ const Home = () => {
           </div>
         </section>
       )}
-    
     </>
   );
 };
