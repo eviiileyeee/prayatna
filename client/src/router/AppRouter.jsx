@@ -11,6 +11,7 @@ import PageNotFound from "../components/subComponents/PageNoteFound";
 import MapPage from "../pages/MapPage";
 import Dashboard from "../pages/Dashboard";
 import { LocationProvider } from "../context/LocationContext";
+import Services from "../pages/Services";
 
 const AppRouter = () => {
   return (
@@ -31,6 +32,7 @@ const AppRouter = () => {
             <Route path="/dashboard" element={<ProtectedRoute><DashboardLayout><Dashboard /></DashboardLayout></ProtectedRoute>} />
             <Route path="/map" element={<DashboardLayout><MapPage /></DashboardLayout>} />
             <Route path="/faqs" element={<DashboardLayout></DashboardLayout>} />
+            <Route path="/services" element={<DashboardLayout><Services /></DashboardLayout>} />
 
 
             {/* 404 route */}
