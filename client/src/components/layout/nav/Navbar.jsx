@@ -9,7 +9,7 @@ import {
   Map, 
   Home, 
   Calendar, 
-  Menu, 
+  Menu,                     
   X,
   Sun,
   Moon
