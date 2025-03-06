@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Globe from "react-globe.gl";
+// import Globe from "react-globe.gl";
 import { 
   LayoutGrid, 
   MapPin, 

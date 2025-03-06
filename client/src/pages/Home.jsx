@@ -61,7 +61,7 @@ const Home = () => {
             overflow-hidden 
             transition-all 
             duration-500 
-            ${darkMode ? "bg-gray-900" : "bg-gradient-to-br from-[#b6cbed] to-[#f1f2f4] text-black"}
+            ${darkMode ? "bg-gray-900" : "bg-gradient-to-br from-white via-[#5475c6] to-[#f1f2f4] text-black"}
           `}
         >
           {/* Date - Positioned for visibility on mobile */}
