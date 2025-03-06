@@ -10,7 +10,7 @@ import {
   Home, 
   Calendar, 
   Menu, 
-  X ,
+  X,
   Sun,
   Moon
 } from 'lucide-react';
@@ -109,26 +109,28 @@ const Navbar = () => {
         </span>
       </div>
 
-      {/* Search Bar */}
-      <div className={`
-        hidden md:flex items-center 
-        ${darkMode 
-          ? 'bg-white/10 border border-white/20' 
-          : 'bg-gray-100 border border-gray-200'}
-        backdrop-blur-md rounded-full pl-3 pr-4 py-1.5 w-1/3
-      `}>
-        <Search className={`h-4 w-4 mr-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
-        <input
-          type="text"
-          placeholder="Search vessels, routes or ports..."
-          className={`
-            bg-transparent w-full text-sm outline-none 
-            ${darkMode 
-              ? 'text-gray-200 placeholder:text-gray-500' 
-              : 'text-gray-800 placeholder:text-gray-500'}
-          `}
-        />
-      </div>
+      {/* Search Bar - Only displayed when user is logged in */}
+      {user && (
+        <div className={`
+          hidden md:flex items-center 
+          ${darkMode 
+            ? 'bg-white/10 border border-white/20' 
+            : 'bg-gray-100 border border-gray-200'}
+          backdrop-blur-md rounded-full pl-3 pr-4 py-1.5 w-1/3
+        `}>
+          <Search className={`h-4 w-4 mr-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+          <input
+            type="text"
+            placeholder="Search vessels, routes or ports..."
+            className={`
+              bg-transparent w-full text-sm outline-none 
+              ${darkMode 
+                ? 'text-gray-200 placeholder:text-gray-500' 
+                : 'text-gray-800 placeholder:text-gray-500'}
+            `}
+          />
+        </div>
+      )}
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-6">
@@ -235,6 +237,29 @@ const Navbar = () => {
             flex flex-col pt-16 space-y-4
           `}
         >
+          {/* Search bar in mobile menu - only when logged in */}
+          {user && (
+            <div className={`
+              flex items-center mx-4 my-2
+              ${darkMode 
+                ? 'bg-white/10 border border-white/20' 
+                : 'bg-gray-100 border border-gray-200'}
+              rounded-full px-3 py-2
+            `}>
+              <Search className={`h-4 w-4 mr-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+              <input
+                type="text"
+                placeholder="Search..."
+                className={`
+                  bg-transparent w-full text-sm outline-none 
+                  ${darkMode 
+                    ? 'text-gray-200 placeholder:text-gray-500' 
+                    : 'text-gray-800 placeholder:text-gray-500'}
+                `}
+              />
+            </div>
+          )}
+          
           <div className="flex flex-col">
             {renderNavLinks(true)}
           </div>
